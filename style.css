@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+#nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+
+}
+#nav-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#nav img{
+    height: 75px;
+}
+#nav h4{
+    font-size: 16px;
+    font-weight: 500;
+}
+#nav button{
+    padding: 14px 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+}
+#nav #btn2{
+    background-color: #0D0C22;
+    color: white;
+}
+#center{
+    height: 80%;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+#center video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#center #overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.586);
+    position: absolute;
+    top: 0;
+}
+#overlay #elem1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 130px;
+    width: 100%;
+}
+#elem1 h5{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.434);
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+#elem1 #hold{
+    background-color: white;
+    color: black;
+}
+#elem1 h5:hover{
+    background-color: white;
+    color: black;
+}
+#overlay h2{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+#overlay p{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 15px;
+}
+#overlay input{
+    width: 40%;
+    padding: 20px 20px;
+    border-radius: 50px;
+    border: none;
+    margin-left: 30%;
+    margin-top: 45px;
+}
+#overlay #elem2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 70px;
+}
+#elem2 h5{
+    color: white;
+    background-color: transparent;
+    padding: 12px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.685);
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+#elem2 h5:hover{
+   border: 1px solid white;
+}
+#elem2 #hold2{
+    border: none;
+}
+#page2{
+    height: 175%;
+    width: 100%;
+    padding: 50px;
+    /* background-color: chocolate; */
+}
+.box{
+    height: 250px;
+    width: 300px;
+    /* background-color: red; */
+    border-radius: 10px;
+    display: inline-block;
+    margin: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.box .bottom{
+    height: 40%;
+    width: 100%;
+    background: linear-gradient(transparent,rgba(0, 0, 0, 0.889));
+    position: absolute;
+    bottom: -40%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    transition: all ease 0.5s;
+}
+.box h6{
+    font-size: 15px;
+}
+.box i{
+    background-color: white;
+    color: black;
+    padding: 6px 7px;
+    border-radius: 5px;
+}
+.box:hover .bottom{
+    bottom: 0;
+}
+#page3{
+    width: 100%;
+    height: 100%;
+    /* background-color: lightgreen; */
+}
+
+#page3 #sign-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    
+}
+#sign-in button{
+    padding: 10px 50px;
+    margin-top: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: #d12a6a;
+    color: white;
+}
+#sign-in h4{
+    font-size: 15px;
+    margin-top: 50px;
+    font-weight: 500;
+}
+#box2{
+    height: 85%;
+    width: 100%;
+    /* background-color: #d12a6a; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 10px; */
+    padding-top: 20px;
+}
+#box2-1{
+    height: 90%;
+    width: 23%;
+    /* background-color: aquamarine; */
+}
+#box2-1 img{
+    height: 100px;
+    width: 200px;
+   margin-top: 35px;
+   margin-left: 20px;
+}
+#box2-1 p{
+    font-size: 15px;
+    margin: 25px 25px;
+}
+#box2-1 #icon{
+    margin: 18px 25px;
+}
+#box2-1 i{
+    font-size: 25px;
+    padding: 5px;
+}
+#box2-2{
+    height: 90%;
+    width: 23%;
+    /* background-color: khaki; */
+}
+#box2-2 h4{
+    padding: 15px 10px;
+    font-weight: 500;
+}
+#box2-3{
+    height: 90%;
+    width: 23%;
+    /* background-color: firebrick; */
+}
+#box2-3 h4{
+    padding: 15px 10px;
+    font-weight: 500;
+}
+#box2-4{
+    height: 90%;
+    width: 23%;
+    /* background-color: fuchsia; */
+}
+#box2-4 h4{
+    padding: 15px 10px;
+    font-weight: 500;
+}
+
+
+
+#hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+}
+
+#mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.mobile-links h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mobile-links button {
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.mobile-links #btn2 {
+    background-color: #0D0C22;
+    color: white;
+}
+
+
+
+
+
+
+
+/* Responsive Design */
+
+/* For tablets and below */
+@media (max-width: 1024px) {
+    #nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    #nav-part1, #nav-part2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #overlay h2 {
+        font-size: 28px;
+    }
+
+    #overlay input {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    #page2 {
+        padding: 20px;
+    }
+
+    .box {
+        width: 45%;
+        margin: 10px;
+    }
+
+    #box2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #box2-1, #box2-2, #box2-3, #box2-4 {
+        width: 45%;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    #nav {
+        padding: 10px;
+    }
+
+    #nav img {
+        height: 60px;
+    }
+
+    #nav h4 {
+        font-size: 14px;
+    }
+
+    #nav button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    #overlay #elem1 {
+        flex-wrap: wrap;
+        gap: 15px;
+        height: auto;
+        padding: 10px;
+    }
+
+    #overlay h2 {
+        font-size: 22px;
+    }
+
+    #overlay p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    #overlay input {
+        width: 80%;
+        margin: 30px 10%;
+        padding: 15px;
+    }
+
+    #overlay #elem2 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .box {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #sign-in {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #sign-in button {
+        padding: 10px 30px;
+    }
+
+    #box2-1, #box2-2, #box2-3, #box2-4 {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #box2-1 img {
+        width: 150px;
+        height: auto;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    #nav-part1, #nav-part2 {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+    }
+}
