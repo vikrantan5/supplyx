@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup - SupplyX</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Gilroy, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    .auth-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .auth-box h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 28px;
+    }
+    .auth-box input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .auth-box button {
+      width: 100%;
+      padding: 14px;
+      background-color: #0D0C22;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .auth-box p {
+      margin-top: 15px;
+      font-size: 14px;
+      text-align: center;
+    }
+    .auth-box a {
+      color: #d12a6a;
+      text-decoration: none;
+    }
+    @media (max-width: 500px) {
+      .auth-box {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-box">
+    <h2>Create an Account</h2>
+    <input type="text" placeholder="Full Name" required />
+    <input type="email" placeholder="Email" required />
+    <input type="password" placeholder="Password" required />
+    <a href="index.html"><button>Sign Up</button></a>
+    <p>Already have an account? <a href="signin.html">Log in</a></p>
+  </div>
+</body>
+</html>
