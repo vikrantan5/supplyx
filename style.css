@@ -7,6 +7,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    font: 15px;
 
 }
 #nav{
@@ -23,6 +24,10 @@ html,body{
     align-items: center;
     justify-content: center;
     gap: 40px;
+   
+}
+#nav-part1 a{
+    text-decoration: none;
 }
 #nav-part2{
     display: flex;
@@ -67,6 +72,9 @@ html,body{
     position: absolute;
     top: 0;
 }
+#overlay h2{
+    margin-top: 45px;
+}
 #overlay #elem1{
     display: flex;
     align-items: center;
@@ -96,7 +104,7 @@ html,body{
 #overlay h2{
     color: white;
     text-align: center;
-    font-size: 35px;
+    font-size: 50px;
 }
 #overlay p{
     font-size: 15px;
@@ -184,11 +192,12 @@ html,body{
 .box:hover .bottom{
     bottom: 0;
 }
-#page3{
+#page3 {
     width: 100%;
-    height: 100%;
-    /* background-color: lightgreen; */
+    min-height: 100vh; /* makes sure it fills the screen at least */
+    padding-bottom: 50px; /* add some space if needed */
 }
+
 
 #page3 #sign-in {
     display: flex;
@@ -318,7 +327,63 @@ html,body{
 }
 
 
+#mobile-nav{
+    display: none;
+}
 
+.mob-footer{
+    display: none;
+}
+
+
+
+footer{
+    background: linear-gradient(60deg , #edadad , #7f61ea);
+    padding-top: 5rem;
+    font-size: 0.9rem;
+
+}
+
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+
+.footer__container >div h4{
+    margin-bottom: 1.2rem;
+}
+
+
+.footer__1 p{
+    margin: 0 0 0 10px;
+}
+.footer__logo a{
+    margin: 0 0 0 10px;
+}
+
+footer ul li{
+    margin-bottom: 0.7rem;
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer__socials{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+
+}
+
+.footer__copyright{
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top:  1px solid rgb(67, 67, 96);
+}
 
 
 
@@ -328,15 +393,31 @@ html,body{
 /* For tablets and below */
 @media (max-width: 1024px) {
     #nav {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-        gap: 10px;
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #mobile-nav{
+        display: block;
+        
+
+    }
+    #mob-nav{
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+    #hamburger {
+        display: block;
     }
 
     #nav-part1, #nav-part2 {
         flex-direction: column;
         gap: 15px;
+        display: none;
     }
 
     #overlay h2 {
@@ -366,25 +447,88 @@ html,body{
     #box2-1, #box2-2, #box2-3, #box2-4 {
         width: 45%;
     }
+
+
+    .footer__container{
+        grid-template-columns: 1fr 1fr;
+    
+    }
 }
 
 /* For mobile devices */
 @media (max-width: 768px) {
     #nav {
-        padding: 10px;
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-    #nav img {
+    #mobile-nav{
+        display: block;
+        
+
+    }
+    #mob-nav{
         height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+    
+
+
+    #nav-part1 {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    #nav-part1{
+        display: inline-block;
     }
 
-    #nav h4 {
-        font-size: 14px;
+    #nav-part1 h4 {
+        display: none;
     }
 
-    #nav button {
-        font-size: 14px;
-        padding: 10px 16px;
+    #nav-part2 {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #elem1 h5{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.434);
+        padding: 7px 15px;
+        border-radius: 50px;
+        font-size: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all ease 0.5s;
+    }
+    #elem2 h5{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.434);
+        padding: 7px 15px;
+        border-radius: 50px;
+        font-size: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all ease 0.5s;
+        
+    }
+
+  
+    #overlay input{
+        width: 40%;
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: none;
+        margin-left: 30%;
+        margin-top: 45px; 
     }
 
     #overlay #elem1 {
@@ -393,60 +537,131 @@ html,body{
         height: auto;
         padding: 10px;
     }
+    #center h2{
+        font-size: 50px;
+    }
 
     #overlay h2 {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     #overlay p {
-        font-size: 13px;
+        font-size: 8px;
         line-height: 20px;
     }
 
     #overlay input {
         width: 80%;
-        margin: 30px 10%;
-        padding: 15px;
+        margin: 10px 10%;
+        padding: 10px;
     }
+    #overlay #elem1 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
 
     #overlay #elem2 {
         flex-wrap: wrap;
         gap: 10px;
     }
 
-    .box {
-        width: 90%;
-        margin: 10px auto;
+    #sign-in h4{
+        font-size: 15px;
+        
+        font-weight: 500;
     }
+    #page2{
+        height: 175%;
+        width: 100%;
+        padding: 50px;
+        /* background-color: chocolate; */
+    }
+    .box{
+        height: 250px;
+        width: 250px;
+        /* background-color: red; */
+        border-radius: 10px;
+        display: inline-block;
+        margin: 25px;
+        position: relative;
+        overflow: hidden;
+    }
+    #box2{
+        height: 85%;
+        width: 100%;
+        /* background-color: #d12a6a; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin-top: 10px; */
+        
+        font-size: 10px;
+    }
+    #box2-1{
+        height: 90%;
+        width: 23%;
+        /* background-color: aquamarine; */
+    }
+    
+    #box2-1 p{
+        font-size: 7px;
+        
+    }
+    #box2-1 #icon{
+       
+    }
+    #box2-1 i{
+        font-size: 7px;
+                padding: 5px;
+    }
+    #box2-2{
+        height: 10%;
+        width: 20%;
+        /* background-color: khaki; */
+    }
+    #box2-2 h4{
+        
+        font-weight: 500;
+    }
+    #box2-3{
+        height: 90%;
+        width: 20%;
+    }
+    #box2-3 h4{
+       
+        font-weight: 500;
+    }
+    #box2-4{
+        height: 90%;
+        width: 20%;
+    }
+    #box2-4 h4{
+      
+        font-size: 7;
+    }
+    
 
-    #sign-in {
-        flex-direction: column;
-        gap: 20px;
-    }
 
-    #sign-in button {
-        padding: 10px 30px;
-    }
+    .footer__container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+     }
 
-    #box2-1, #box2-2, #box2-3, #box2-4 {
-        width: 90%;
-        margin: 10px auto;
-    }
+     .footer__1 p{
+        margin: 1rem auto;
+     }
 
-    #box2-1 img {
-        width: 150px;
-        height: auto;
-    }
+     .footer__socials{
+        justify-content: centers;
+     }
+
+    
+        
+
 }
 
 
 
-@media (max-width: 768px) {
-    #nav-part1, #nav-part2 {
-        display: none;
-    }
 
-    #hamburger {
-        display: block;
-    }
-}
